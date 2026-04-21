@@ -73,9 +73,9 @@ docker exec -it postgres_db psql -U admin -d pipeline_db -c "SELECT COUNT(*) FRO
 |---|---|
 | Host | localhost |
 | Port | 5432 |
-| Database | pipeline_db |
-| User | admin |
-| Password | admin5555 |
+| Database | xxxx |
+| User | xxxx |
+| Password | xxxx |
 
 **Schema**
 
