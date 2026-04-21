@@ -1,0 +1,16 @@
+import os
+
+@data_loader
+def load_data(*args, **kwargs):
+    data_path = '/home/src/pipeline_test/data_sample'
+    files = sorted(
+        f.path for f in os.scandir(data_path)
+        if f.name.endswith('.parquet')
+    )
+    print(f"Found {len(files):,} parquet files")
+    return files
+
+@test
+def test_output(output, *args):
+    assert output is not None, "Output is None"
+    assert len(output) > 0, "No files found"

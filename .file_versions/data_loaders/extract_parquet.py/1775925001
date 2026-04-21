@@ -1,0 +1,14 @@
+import glob
+import time
+
+@data_loader
+def load_data(*args, **kwargs):
+    files = sorted(glob.glob('/home/src/pipeline_test/data_sample/*.parquet'))
+    elapsed = time.time() - start
+    print(f"Found {len(files):,} parquet files in {elapsed:.1f}s")
+    return files
+
+@test
+def test_output(output, *args):
+    assert output is not None, "Output is None"
+    assert len(output) > 0, "No files found"

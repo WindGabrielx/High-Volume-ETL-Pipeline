@@ -1,0 +1,9 @@
+version: 0.1.9
+default:
+  POSTGRES_CONNECT_TIMEOUT: 10
+  POSTGRES_DBNAME: pipeline_db
+  POSTGRES_SCHEMA: public
+  POSTGRES_USER: admin
+  POSTGRES_PASSWORD: admin5555
+  POSTGRES_HOST: postgres
+  POSTGRES_PORT: 5432

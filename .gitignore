@@ -1,0 +1,25 @@
+# Sensitive config
+.env
+.ssh_tunnel/
+
+# Mage.ai internals
+.file_versions/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# Data files
+data_sample/
+*.parquet
+*.csv
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
