@@ -30,6 +30,8 @@ docker-compose up -d
 
 This spins up PostgreSQL on port 5432 and Mage.ai on port 6789.
 
+![Docker Containers](picture/1777395605614.jpg)
+
 **3. Create the table**
 
 ```bash
@@ -54,6 +56,8 @@ Open http://localhost:6789, go to `datawow_pipeline`, and hit Run.
 The pipeline has two blocks:
 - `extract_parquet` scans `data_sample/` and returns a list of file paths
 - `load_postgres` reads files in batches and bulk-loads into PostgreSQL via `COPY`
+
+![Mage Pipeline DAG](picture/1777395649788.jpg)
 
 Progress is logged every 5,000 files. When it finishes you should see ~82M rows in the table.
 
